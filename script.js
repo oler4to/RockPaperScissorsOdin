@@ -29,13 +29,14 @@ function playRound() {
   } else if((playerSelection == "Rock" && computerSelection == "Paper") 
   || (playerSelection == "Paper" && computerSelection == "Scissors" ) 
   || (playerSelection == "Scissors" && computerSelection == "Rock") ){
-    console.log("THAT'S ONE FOR THE COMPUTER");
+    console.log(`${computerSelection} beats ${playerSelection}. 
+    THE COMPUTER WINS`);
    return computerScore++;
     
   } else if ((playerSelection !== "Rock" && computerSelection == "Paper") 
   || (playerSelection !== "Paper" && computerSelection == "Scissors" ) 
   || (playerSelection !== "Scissors" && computerSelection == "Rock") ) {
-    console.log("WELL DONE!");
+    console.log(`${playerSelection} beats ${computerSelection}. YOU WIN`);
     return playerScore++;
   }
 }
@@ -50,11 +51,11 @@ game();
 
 function results(){
   if(playerScore >= 3){
-  alert("YOU WON")
+  alert("YOUR ARE THE CHAMPION OF THIS GAME");
   } else if (computerScore >= 3){
-    alert("YOU LOST")
+    alert("UNFORTUNATELY, YOU FAILED");
   } else {
-    alert("NO ONE WON. REPLAY")
+    alert("NO ONE WON. REPLAY");
   }
 }
 
