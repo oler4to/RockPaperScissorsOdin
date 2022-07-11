@@ -17,10 +17,11 @@ function computerPlay() {
 
 computerPlay();
 
-function playRound() {
-  let playerSelection = prompt("Pick your fighter");
   let playerScore = 0;
   let computerScore = 0;
+  
+function playRound() {
+  let playerSelection = prompt("Pick your fighter");
   
   if(playerSelection == computerSelection){
     console.log("THAT'S A TIE");
@@ -47,3 +48,15 @@ function game(){
   }
 }
 game();
+
+function results(){
+  if(playerScore >= 3){
+  alert("YOU WON")
+  } else if (computerScore >= 3){
+    alert("YOU LOST")
+  } else {
+    alert("NO ONE WON. REPLAY")
+  }
+}
+
+results()
