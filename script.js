@@ -19,18 +19,31 @@ computerPlay();
 
 function playRound() {
   let playerSelection = prompt("Pick your fighter");
+  let playerScore = 0;
+  let computerScore = 0;
   
   if(playerSelection == computerSelection){
     console.log("THAT'S A TIE");
     
-  } else if((playerSelection == "Rock" && computerSelection == Paper) 
+  } else if((playerSelection == "Rock" && computerSelection == "Paper") 
   || (playerSelection == "Paper" && computerSelection == "Scissors" ) 
   || (playerSelection == "Scissors" && computerSelection == "Rock") ){
     console.log("THAT'S ONE FOR THE COMPUTER");
+   return computerScore++;
     
-  } else{
-    console.log("WELL DONE!")
+  } else if ((playerSelection !== "Rock" && computerSelection == "Paper") 
+  || (playerSelection !== "Paper" && computerSelection == "Scissors" ) 
+  || (playerSelection !== "Scissors" && computerSelection == "Rock") ) {
+    console.log("WELL DONE!");
+    return playerScore++;
   }
 }
 playRound();
 
+function game(){
+  for (let i = 0; i < 5; i++) {
+    computerPlay()
+  playRound();
+  }
+}
+game();
