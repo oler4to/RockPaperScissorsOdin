@@ -24,19 +24,20 @@ function playRound() {
   let playerSelection = prompt("Pick your fighter");
   
   if(playerSelection == computerSelection){
-    console.log("THAT'S A TIE");
+    alert("THAT'S A TIE");
     
   } else if((playerSelection == "Rock" && computerSelection == "Paper") 
   || (playerSelection == "Paper" && computerSelection == "Scissors" ) 
   || (playerSelection == "Scissors" && computerSelection == "Rock") ){
-    console.log(`${computerSelection} beats ${playerSelection}. 
+    alert(`${computerSelection} beats ${playerSelection}.
     THE COMPUTER WINS`);
    return computerScore++;
     
   } else if ((playerSelection !== "Rock" && computerSelection == "Paper") 
   || (playerSelection !== "Paper" && computerSelection == "Scissors" ) 
   || (playerSelection !== "Scissors" && computerSelection == "Rock") ) {
-    console.log(`${playerSelection} beats ${computerSelection}. YOU WIN`);
+    alert(`${playerSelection} beats ${computerSelection}.
+    YOU WIN`);
     return playerScore++;
   }
 }
@@ -44,6 +45,7 @@ playRound();
 
 function game(){
   for (let i = 0; i < 5; i++) {
+  computerPlay();
   playRound();
   }
 }
