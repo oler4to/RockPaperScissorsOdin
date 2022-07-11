@@ -17,7 +17,7 @@ function computerPlay() {
 
 computerPlay();
 
-function game() {
+function playRound() {
   let playerSelection = prompt("Pick your fighter");
   
   if(playerSelection == computerSelection){
@@ -32,4 +32,5 @@ function game() {
     console.log("WELL DONE!")
   }
 }
-game();
+playRound();
+
