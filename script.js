@@ -15,7 +15,7 @@ function computerPlay() {
   }
 }
 
-computerPlay();
+
 
   let playerScore = 0;
   let computerScore = 0;
@@ -41,7 +41,7 @@ function playRound() {
     return playerScore++;
   }
 }
-playRound();
+
 
 function game(){
   for (let i = 0; i < 5; i++) {
