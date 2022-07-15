@@ -1,3 +1,5 @@
+ 
+let gameDisplay = document.querySelector('.gameDisplay')
 
   let computerSelection = ['Rock'
   , 'Paper'
