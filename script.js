@@ -33,23 +33,19 @@ function playRound() {
     THE COMPUTER WINS`);
    return computerScore++;
     
+  } else if (playerSelection == null){
+    alert("Please Enter A Value");
+    
   } else if ((playerSelection !== "Rock" && computerSelection == "Paper") 
   || (playerSelection !== "Paper" && computerSelection == "Scissors" ) 
-  || (playerSelection !== "Scissors" && computerSelection == "Rock") ) {
+  || (playerSelection !== "Scissors" && computerSelection == "Rock" ) ) {
     alert(`${playerSelection} beats ${computerSelection}.
     YOU WIN`);
     return playerScore++;
-  }
+}
 }
 
 
-function game(){
-  for (let i = 0; i < 5; i++) {
-  computerPlay();
-  playRound();
-  }
-}
-game();
 
 function results(){
   if(playerScore >= 3){
