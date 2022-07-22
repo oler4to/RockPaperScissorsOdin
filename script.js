@@ -7,6 +7,7 @@ const endResult = document.querySelector('.endResult');
 
 let computerSelection = ["Rock", "Paper", "Scissors"];
 
+ function playGame(){
 function computerPlay(){
   let random = (Math.floor(Math.random() * computerSelection.length));
   
@@ -18,6 +19,8 @@ function computerPlay(){
     computerSelection = "Scissors";
   }
 }
+
+computerPlay()
 
 let playerScore = 0;
 let computerScore = 0;
@@ -36,8 +39,8 @@ function playRound(input){
     console.log("You guys are tied");
   }
 }
-
+playRound(playerSelection)
+}
 for (i = 0; i <= 5; i++){
-  computerPlay()
-  playRound(playerSelection)
+  playGame()
 }
