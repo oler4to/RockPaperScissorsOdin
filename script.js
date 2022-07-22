@@ -5,12 +5,16 @@ const playResult = document.querySelector('.result');
 const score = document.querySelector('.score');
 const endResult = document.querySelector('.endResult');
 
-const computerSelection = ["Rock", "Paper", "Scissors"];
+let computerSelection = ["Rock", "Paper", "Scissors"];
 
 function computerPlay(){
   let random = (Math.floor(Math.random() * computerSelection.length));
   
-  console.log(random);
+  if (random == 0){
+    computerSelection = "Rock"
+  }
+  
+  console.log(computerSelection)
 }
 
 computerPlay()
