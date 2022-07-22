@@ -21,3 +21,9 @@ function computerPlay(){
 }
 
 computerPlay();
+
+function playRound(playerSelection){
+  if(playerSelection == computerSelection){
+    console.log("You guys tied!")
+  }
+}
