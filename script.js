@@ -1,6 +1,7 @@
  
 let gameDisplay = document.querySelector('.gameDisplay')
 
+
   let computerSelection = ['Rock'
   , 'Paper'
   ,'Scissors'];
@@ -18,12 +19,10 @@ function computerPlay() {
 }
 
 
-
   let playerScore = 0;
   let computerScore = 0;
   
-function playRound() {
-  let playerSelection = prompt("Pick your fighter");
+function playRound(playerSelection) {
   
   if(playerSelection == computerSelection){
     alert("THAT'S A TIE");
