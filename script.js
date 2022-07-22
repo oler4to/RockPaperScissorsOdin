@@ -17,19 +17,26 @@ function computerPlay(){
   } else if(random == 2){
     computerSelection = "Scissors";
   }
-  return computerSelection.toLowerCase();
 }
 
 computerPlay();
 
+let playerScore = 0;
+let computerScore = 0;
+
 function playRound(input){
-  if(input == computerSelection){
-    console.log("You guys tied!");
-  } else if ((input == "Rock" && computerSelection== "Scissors")||(input == "Paper" && computerSelection == "Rock")||(input == "Scissors" && computerSelection == "Paper")){
+  
+  if((input == "rock" && computerSelection == "Scissors") || (input == "paper" && computerSelection == "Rock") || (input == "scissors" && computerSelection == "Paper")){
     console.log("Yes! KEEP GOING!");
-  } else if ((input == "Scissors" && computerSelection== "Rock")||(input == "Rock" && computerSelection == "Paper")||(input == "Paper" && computerSelection == "Scissors")){
-    console.log("Oh Shucks! TRY AGAIN!")
+    return playerScore++;
+    
+  }else if ((input == "scissors" && computerSelection == "Rock")||(input == "rock" && computerSelection == "Paper")||(input == "paper" && computerSelection == "Scissors")){
+    console.log("Oh Shucks! TRY AGAIN!");
+    return computerScore++;
+ } else if(input == computerSelection){
+    console.log("You guys are tied");
   }
 }
 let playerSelection = (prompt("Your Fighter")).toLowerCase();
+
 playRound(player);
