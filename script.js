@@ -17,7 +17,7 @@ function computerPlay(){
   } else if(random == 2){
     computerSelection = "Scissors";
   }
-  
+  computerSelection.toLowerCase();
 }
 
-computerPlay()
+computerPlay();
