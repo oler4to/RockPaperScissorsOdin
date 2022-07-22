@@ -27,6 +27,8 @@ function playRound(input){
     console.log("You guys tied!");
   } else if ((input == "Rock" && computerSelection== "Scissors")||(input == "Paper" && computerSelection == "Rock")||(input == "Scissors" && computerSelection == "Paper")){
     console.log("Yes! KEEP GOING!");
+  } else if ((input == "Scissors" && computerSelection== "Rock")||(input == "Rock" && computerSelection == "Paper")||(input == "Paper" && computerSelection == "Scissors")){
+    console.log("Oh Shucks! TRY AGAIN!")
   }
 }
 let playerSelection = (prompt("Your Fighter")).toLowerCase();
