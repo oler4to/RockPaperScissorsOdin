@@ -19,10 +19,9 @@ function computerPlay(){
   }
 }
 
-computerPlay();
-
 let playerScore = 0;
 let computerScore = 0;
+let playerSelection = (prompt("Your Fighter")).toLowerCase();
 
 function playRound(input){
   
@@ -37,6 +36,8 @@ function playRound(input){
     console.log("You guys are tied");
   }
 }
-let playerSelection = (prompt("Your Fighter")).toLowerCase();
 
-playRound(player);
+for (i = 0; i <= 5; i++){
+  computerPlay()
+  playRound(playerSelection)
+}
