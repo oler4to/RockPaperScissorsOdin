@@ -17,13 +17,17 @@ function computerPlay(){
   } else if(random == 2){
     computerSelection = "Scissors";
   }
-  computerSelection.toLowerCase();
+  return computerSelection.toLowerCase();
 }
 
 computerPlay();
 
-function playRound(playerSelection){
-  if(playerSelection == computerSelection){
-    console.log("You guys tied!")
+function playRound(input){
+  if(input == computerSelection){
+    console.log("You guys tied!");
+  } else{
+    console.log("You win");
   }
 }
+let player = (prompt("Your Fighter")).toLowerCase();
+playRound(player);
