@@ -47,7 +47,6 @@ function playRound(playerSelection) {
 }
 
 
-
 function results(){
   if(playerScore >= 3){
   alert("YOUR ARE THE CHAMPION OF THIS GAME");
@@ -58,4 +57,7 @@ function results(){
   }
 }
 
-results()
+results();
+
+const buttons = document.querySelectorAll('button');
+
