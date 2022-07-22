@@ -25,8 +25,8 @@ computerPlay();
 function playRound(input){
   if(input == computerSelection){
     console.log("You guys tied!");
-  } else{
-    console.log("You win");
+  } else if ((input == "Rock" && computerSelection== "Scissors")||(input == "Paper" && computerSelection == "Rock")||(input == "Scissors" && computerSelection == "Paper")){
+    console.log("Yes! KEEP GOING!");
   }
 }
 let playerSelection = (prompt("Your Fighter")).toLowerCase();
