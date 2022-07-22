@@ -29,5 +29,5 @@ function playRound(input){
     console.log("You win");
   }
 }
-let player = (prompt("Your Fighter")).toLowerCase();
+let playerSelection = (prompt("Your Fighter")).toLowerCase();
 playRound(player);
