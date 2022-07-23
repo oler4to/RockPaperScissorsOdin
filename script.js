@@ -1,69 +1,131 @@
-const game = document.querySelector('#game');
-const buttons = document.querySelectorAll('button');
+const gameDisplay = document.querySelector('#game');
+const buttons = document.querySelectorAll('#game button');
 
 const playResult = document.querySelector('.result');
-const score = document.querySelector('.score');
-const endResult = document.querySelector('.endResult');
+const statement = document.querySelector('.statement');
+const scorePlayer = document.querySelector('.scorePlayer');
+const scoreComp = document.querySelector('.scoreComputer');
+const defaultScore = document.createElement('p');
 
-
-
-let computerSelection = ["Rock", "Paper", "Scissors"];
-
-function computerPlay(){
-  let random = (Math.floor(Math.random() * computerSelection.length));
-  
-  if (random == 0){
-    computerSelection = "Rock";
-  } else if (random == 1){
-    computerSelection = "Paper";
-  } else if(random == 2){
-    computerSelection = "Scissors";
-  }
-}
-computerPlay()
-
+const gameReset = document.querySelector(".reset");
 
 let playerScore = 0;
 let computerScore = 0;
-
- function play(){
-  function playRound(input){
- 
-      if (input == computerSelection ){
-      console.log("You guys tied")
-    } else if((input == "Scissors" && computerSelection == "Paper") || (input == "Paper" && computerSelection == "Rock") || (input == "Rock" && computerSelection == "Scissors")){
-      console.log(`${input} beats ${computerSelection}
-    You win`)
-      return playerScore++
-    } else if((input == "Rock" && computerSelection == "Paper") || (input == "Scissors" && computerSelection == "Rock") || (input == "Paper" && computerSelection == "Scissors")){
-      console.log(`${computerSelection} beats ${input}
-     You lose.`)
-     return computerScore++
-    } else if(input !== "Rock" || input !== "Paper" ||  input !== "Scissors"){
-      console.log("enter a value")
-    }
-}
+let tie = 0;
+let playerSelection = "";
+let computerSelection = "";
 
 
-}
-buttons.forEach((button) => {
-  button.textContent = button.value.toUpperCase()
+function getRandomNum(){
+  let randomNum = Math.floor(Math.random() * 3);
   
-  button.addEventListener('click', () =>
-  playRound(button.value))
-})
-
-  for(let i = 0; i < 5; i++){
-play()
+  switch (randomNum) {
+    case 0:
+    computerSelection = "ROCK";
+      break;
+    case 1:
+      computerSelection = "PAPER";
+      break;
+    case 2:
+      computerSelection = "SCISSORS";
+  }
+}
+  
+function buttonSelect(input){
+    switch (input){
+      case ("ROCK"):
+        playerSelection = input;
+        break;
+      case ("PAPER"):
+        playerSelection = input;
+        break;
+      case ("SCISSORS"):
+        playerSelection = input;
+    } 
 }
 
-  function gameResult(){
-    if (playerScore <= 2 && computerScore <= 2){
-      console.log("Noboy won")
-    }  else if(playerScore >= 3){
-      console.log("YOU WON THE GAME")
-    } else if (computerScore >= 3) {
-      console.log("You lost")
+    let score = `TIES: ${tie}`;
+    let plyScr = `PLAYER: ${playerScore}`;
+    let compScr = `COMPUTER: ${computerScore}`;
+    let state = "";
+    let result = "";
+
+function playRound(){
+    
+    if((playerSelection == computerSelection)){
+      tie++;
+      result = "YOU BOTH TIED";
+      score = `TIES: ${tie}`;
+      
+    }else if((playerSelection == "ROCK" && computerSelection == "PAPER") || (playerSelection == "PAPER" && computerSelection == "SCISSORS") || (playerSelection == "SCISSORS" && computerSelection == "ROCK")){
+      
+      playerScore++;
+       plyScr =`PLAYER: ${playerScore}`;
+       state = `${playerSelection} BEATS ${computerSelection}`;
+       result = ("PLAYER WINS THIS ROUND");
+       
+    } else if((playerSelection == "ROCK" && computerSelection == "SCISSORS") || (playerSelection == "PAPER" && computerSelection == "ROCK") || (playerSelection == "SCISSORS" && computerSelection == "PAPER")){
+      
+        computerScore++;
+        compScr = `COMPUTER: ${computerScore}`;
+        state = `${computerSelection} BEATS ${playerSelection}`;
+        result = ("COMPUTER WINS THIS ROUND");
     }
+    
+    scorePlayer.textContent = plyScr;
+    scoreComp.textContent = compScr;
+    statement.textContent = state;
+    playResult.textContent = result;
+    defaultScore.textContent = score;
+}
+
+
+buttons.forEach((btn) =>{
+  btn.textContent = btn.value;
+  
+  btn.addEventListener("click", () => {
+    buttonSelect(btn.value);
+      getRandomNum();
+    playRound();
+    checkScore();
+    });
   }
-  gameResult()
+);
+
+
+function reset(){
+  playerScore = 0;
+  computerScore = 0;
+  tie = 0;
+  playerSelection = "";
+  computerSelection = "";
+  plyScr = "";
+  compScr = ``;
+  score = '';
+  result = "";
+  state = "";
+  
+    scorePlayer.textContent = plyScr;
+    scoreComp.textContent = compScr;
+    statement.textContent = state;
+    playResult.textContent = result;
+    defaultScore.textContent = score;
+}
+function checkScore(){
+  if(playerScore == 5 || computerScore == 5 || tie == 5){ 
+    if(playerScore == 5){
+    alert("YOU WON THE GAME!");
+  } else if (computerScore == 5){
+    alert("THIS GAME GOES TO THE COMPUTER");
+  } else if (tie == 5){
+    alert("THE GAME ENDS IN A TIE");
+  }
+  reset();
+  }
+}
+    
+gameDisplay.appendChild(playResult);
+gameDisplay.appendChild(statement);
+gameDisplay.appendChild(scorePlayer);
+gameDisplay.appendChild(scoreComp);
+gameDisplay.appendChild(defaultScore);
