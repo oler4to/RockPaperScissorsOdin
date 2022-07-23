@@ -1,5 +1,5 @@
 const game = document.querySelector('#game');
-const buttons = document.querySelector('button');
+const buttons = document.querySelectorAll('button');
 
 const playResult = document.querySelector('.result');
 const score = document.querySelector('.score');
@@ -46,7 +46,14 @@ const value = prompt("N0.?")
 }
 
 playRound(value)
+
+buttons.forEach((button) => {
+  
+  button.addEventListener('click', () =>
+  console.log(button.value))
+})
 }
+
   for(let i = 0; i < 5; i++){
 play()
 }
@@ -60,5 +67,4 @@ play()
       console.log("You lost")
     }
   }
-  
   gameResult()
