@@ -7,8 +7,6 @@ const scorePlayer = document.querySelector('.scorePlayer');
 const scoreComp = document.querySelector('.scoreComputer');
 const defaultScore = document.createElement('p');
 
-const gameReset = document.querySelector(".reset");
-
 let playerScore = 0;
 let computerScore = 0;
 let tie = 0;
