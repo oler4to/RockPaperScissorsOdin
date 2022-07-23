@@ -27,7 +27,6 @@ let playerScore = 0;
 let computerScore = 0;
 
  function play(){
-const value = prompt("N0.?")
   function playRound(input){
  
       if (input == computerSelection ){
@@ -45,14 +44,14 @@ const value = prompt("N0.?")
     }
 }
 
-playRound(value)
 
+}
 buttons.forEach((button) => {
+  button.textContent = button.value.toUpperCase()
   
   button.addEventListener('click', () =>
-  console.log(button.value))
+  playRound(button.value))
 })
-}
 
   for(let i = 0; i < 5; i++){
 play()
