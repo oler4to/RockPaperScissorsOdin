@@ -5,9 +5,10 @@ const playResult = document.querySelector('.result');
 const score = document.querySelector('.score');
 const endResult = document.querySelector('.endResult');
 
+
+
 let computerSelection = ["Rock", "Paper", "Scissors"];
 
- function playGame(){
 function computerPlay(){
   let random = (Math.floor(Math.random() * computerSelection.length));
   
@@ -19,28 +20,37 @@ function computerPlay(){
     computerSelection = "Scissors";
   }
 }
-
 computerPlay()
+
 
 let playerScore = 0;
 let computerScore = 0;
-let playerSelection = (prompt("Your Fighter")).toLowerCase();
 
+
+let value;
 function playRound(input){
-  
-  if((input == "rock" && computerSelection == "Scissors") || (input == "paper" && computerSelection == "Rock") || (input == "scissors" && computerSelection == "Paper")){
-    console.log("Yes! KEEP GOING!");
-    return playerScore++;
-    
-  }else if ((input == "scissors" && computerSelection == "Rock")||(input == "rock" && computerSelection == "Paper")||(input == "paper" && computerSelection == "Scissors")){
-    console.log("Oh Shucks! TRY AGAIN!");
-    return computerScore++;
- } else if(input == computerSelection){
-    console.log("You guys are tied");
+ value = (prompt("N0.?")).toLowerCase()
+  if((input == "Scissors" && computerSelection == "Paper") || (input == "Paper" && computerSelection == "Rock") || (input == "Rock" && computerSelection == "Scissors")){
+console.log(`${input} beats ${computerSelection}
+You win`)
+return playerScore++
+
+} else if((input == "Rock" && computerSelection == "Paper") || (input == "Scissors" && computerSelection == "Rock") || (input == "Paper" && computerSelection == "Scissors")){
+  console.log(`${computerSelection} beats ${input}
+  You lose.`)
+} else if (input == computerSelection ){
+  console.log("You guys tied")
+} else{
+  console.log("Please enter another value")
+}
   }
+  
+  for(let i = 0; i < 5; i++){
+playRound(value)
 }
-playRound(playerSelection)
-}
-for (i = 0; i <= 5; i++){
-  playGame()
-}
+
+  function gameResult(){
+    if(playerScore >= 3){
+      console.log("YOU WON THE GAME")
+    }
+  }
