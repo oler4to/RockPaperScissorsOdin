@@ -26,31 +26,39 @@ computerPlay()
 let playerScore = 0;
 let computerScore = 0;
 
-
-let value;
-function playRound(input){
- value = (prompt("N0.?")).toLowerCase()
-  if((input == "Scissors" && computerSelection == "Paper") || (input == "Paper" && computerSelection == "Rock") || (input == "Rock" && computerSelection == "Scissors")){
-console.log(`${input} beats ${computerSelection}
-You win`)
-return playerScore++
-
-} else if((input == "Rock" && computerSelection == "Paper") || (input == "Scissors" && computerSelection == "Rock") || (input == "Paper" && computerSelection == "Scissors")){
-  console.log(`${computerSelection} beats ${input}
-  You lose.`)
-} else if (input == computerSelection ){
-  console.log("You guys tied")
-} else{
-  console.log("Please enter another value")
+ function play(){
+const value = prompt("N0.?")
+  function playRound(input){
+ 
+      if (input == computerSelection ){
+      console.log("You guys tied")
+    } else if((input == "Scissors" && computerSelection == "Paper") || (input == "Paper" && computerSelection == "Rock") || (input == "Rock" && computerSelection == "Scissors")){
+      console.log(`${input} beats ${computerSelection}
+    You win`)
+      return playerScore++
+    } else if((input == "Rock" && computerSelection == "Paper") || (input == "Scissors" && computerSelection == "Rock") || (input == "Paper" && computerSelection == "Scissors")){
+      console.log(`${computerSelection} beats ${input}
+     You lose.`)
+     return computerScore++
+    } else if(input !== "Rock" || input !== "Paper" ||  input !== "Scissors"){
+      console.log("enter a value")
+    }
 }
-  }
-  
-  for(let i = 0; i < 5; i++){
+
 playRound(value)
+}
+  for(let i = 0; i < 5; i++){
+play()
 }
 
   function gameResult(){
-    if(playerScore >= 3){
+    if (playerScore <= 2 && computerScore <= 2){
+      console.log("Noboy won")
+    }  else if(playerScore >= 3){
       console.log("YOU WON THE GAME")
+    } else if (computerScore >= 3) {
+      console.log("You lost")
     }
   }
+  
+  gameResult()
