@@ -57,17 +57,19 @@ function playRound(){
       
     }else if((playerSelection == "ROCK" && computerSelection == "PAPER") || (playerSelection == "PAPER" && computerSelection == "SCISSORS") || (playerSelection == "SCISSORS" && computerSelection == "ROCK")){
       
-      playerScore++;
+      computerScore++;
        plyScr =`PLAYER: ${playerScore}`;
+       compScr = `PLAYER: ${computerScore}`
        state = `${computerSelection} BEATS ${playerSelection}`;
-       result = ("PLAYER WINS THIS ROUND");
+       result = ("COMPUTER WINS THIS ROUND");
        
     } else if((playerSelection == "ROCK" && computerSelection == "SCISSORS") || (playerSelection == "PAPER" && computerSelection == "ROCK") || (playerSelection == "SCISSORS" && computerSelection == "PAPER")){
       
-        computerScore++;
+        playerScore++;
+        plyScr = `PLAYER: ${playerScore}`
         compScr = `COMPUTER: ${computerScore}`;
         state = `${playerSelection} BEATS ${computerSelection}`;
-        result = ("COMPUTER WINS THIS ROUND");
+        result = ("PLAYER WINS THIS ROUND");
     }
     
     scorePlayer.textContent = plyScr;
