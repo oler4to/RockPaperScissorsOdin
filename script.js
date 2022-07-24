@@ -59,7 +59,7 @@ function playRound(){
       
       computerScore++;
        plyScr =`PLAYER: ${playerScore}`;
-       compScr = `PLAYER: ${computerScore}`
+       compScr = `COMPUTER: ${computerScore}`
        state = `${computerSelection} BEATS ${playerSelection}`;
        result = ("COMPUTER WINS THIS ROUND");
        
