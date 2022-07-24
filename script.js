@@ -59,14 +59,14 @@ function playRound(){
       
       playerScore++;
        plyScr =`PLAYER: ${playerScore}`;
-       state = `${playerSelection} BEATS ${computerSelection}`;
+       state = `${computerSelection} BEATS ${playerSelection}`;
        result = ("PLAYER WINS THIS ROUND");
        
     } else if((playerSelection == "ROCK" && computerSelection == "SCISSORS") || (playerSelection == "PAPER" && computerSelection == "ROCK") || (playerSelection == "SCISSORS" && computerSelection == "PAPER")){
       
         computerScore++;
         compScr = `COMPUTER: ${computerScore}`;
-        state = `${computerSelection} BEATS ${playerSelection}`;
+        state = `${playerSelection} BEATS ${computerSelection}`;
         result = ("COMPUTER WINS THIS ROUND");
     }
     
