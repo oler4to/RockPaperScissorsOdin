@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-  <div id="game"> <center>
-    <button value="ROCK"></button>
-    <button value="PAPER"></button>
-    <button value="SCISSORS"></button>
-    </center>
-    
+    <h1>
+    ROCK<br>
+    PAPER<br>
+    SCISSORS</h1>
+    <div class="container1">
+ <div id="game"> 
+  
+    <button value="ROCK">
+      <img src="/img/rock.png"/>
+      </button>
+      
+    <button value="PAPER">
+      <img src="/img/paper.png" alt="" />
+      </button>
+      
+    <button value="SCISSORS">
+      <img src="/img/scissors.png" alt="" />
+      </button>
+      
+    </div>
+  </div>  
+    <div class="gameDisplay">
+      
     <p class="statement"></p>
     <p class="result"></p>
     <p class="scorePlayer"></p>
     <p class="scoreComputer"></p>
+    
     </div>
+      
     <script src="script.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

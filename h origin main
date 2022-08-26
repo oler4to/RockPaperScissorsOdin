@@ -1,0 +1,268 @@
+[33mcommit 65d524338d7fe2a4024859aef58b6b623ed59b80[m[33m ([m[1;36mHEAD -> [m[1;32mrps-ui[m[33m)[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Sat Jul 23 22:54:49 2022 +0200
+
+    Reset most of the script and redid it for the third time and I excelled. It finally works
+
+[33mcommit 8bbc70043689cdfd0b4b10e67f640dc540e33a82[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Sat Jul 23 14:26:50 2022 +0200
+
+    Remove variable 'value'.
+    Place code run for 'playRound()' inside button Iteration so that in takes 'button.value' as parameter
+
+[33mcommit 5cc2febdc6e67f2f112d76eac00a4deb863ab750[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Sat Jul 23 14:15:27 2022 +0200
+
+    Create button loop intended to iterate through 'buttons' NodeList and add an event listener
+
+[33mcommit a0977cbd95739295fa03981b27ef9051689ff9a1[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Sat Jul 23 14:06:13 2022 +0200
+
+    Place variable 'value' and playRound function inside a new function 'play' to avoid bugs.
+    Add condition in gameResult function for computerScore and default result
+
+[33mcommit e1a5633ba6ab4852e2f4c163ea3ab16608bdf275[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Sat Jul 23 13:19:09 2022 +0200
+
+    Add function that'll display the winner of the game in the end.
+    Change game Iteration to play 5 rounds
+
+[33mcommit bdc2ef830148a718f4bcc360aaca75ab70a7b06b[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 23:45:47 2022 +0200
+
+    Place the 'computerPlay' and down to the 'playRound' inside function 'playGame'
+
+[33mcommit 817045fd81e6fb1b9c52fd202a88160a4390ba62[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 23:38:21 2022 +0200
+
+    Add a loop that will iterate through the 'computerPlay' and 'playRound' functions
+
+[33mcommit 8aa56899ebbceb8e1c228dba5f4bcf69c5830831[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 23:30:46 2022 +0200
+
+    Declare variable for computer and player scores. Place return statement that return the player or computer score increased by one when ever one wins
+
+[33mcommit 03d98dd4e9d3feb5d2ad42ef2de7e67ac3708e71[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 22:45:23 2022 +0200
+
+    Add once again another conditional, but to check if I have lost the round
+
+[33mcommit c60850030bc859d54ba95b6a6a4f9c10ef84f291[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 22:41:43 2022 +0200
+
+    Add another condition to check if I have won the round
+
+[33mcommit b048a3d4c87a864eec7f25c11b633bc1e4885ee6[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 22:34:41 2022 +0200
+
+    Change variable 'player' to 'playerSelection'
+
+[33mcommit 7e53f41ebdd72ff9637ae7efeee4a72b6f03f133[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 22:32:26 2022 +0200
+
+    Declare variable 'player' with prompt, then place 'player' in playRound parameter
+
+[33mcommit 390ff69513fa38f7ddf434f37820a0d26d5a66e3[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 22:16:57 2022 +0200
+
+    Create a function 'playRound' with a parameter, that shall check if the parameter is the same as 'computerSelection'
+
+[33mcommit bcc002a3f726856da4373465ea7478418cee8576[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 22:11:33 2022 +0200
+
+    Add the 'toLowerCase' function so that 'computerSelection' returns the value case-usensitive
+
+[33mcommit 3301f4b0eb62e55c8708d9ee3f6a5d96a64769a4[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 22:08:56 2022 +0200
+
+    Add 2 conditions to change the 'computerSelection' with either Paper or Scissors depending on the random variable
+
+[33mcommit 836bbe95f4f5cfa2fde17093ff6a4480d6b4da29[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:58:11 2022 +0200
+
+    Change 'computerSelection' to changeable variable.Add code that will change 'computerSelection' to Rock if random == 0
+
+[33mcommit edf54603c4c0cdfb8e8f55c3041e27511798bef0[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:53:13 2022 +0200
+
+    Create a function that generates a random number from the length of the computerSelection
+
+[33mcommit 411034256ec6fc1b9a5291a7c1594eb937d1ba5d[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:40:00 2022 +0200
+
+    Declare 'computerSelection' variables with Array
+
+[33mcommit 8fce3af2f32778bbc00ec242942af21d8372afce[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:35:56 2022 +0200
+
+    Target all the 'div', 'button' and 'p' elements
+
+[33mcommit 5acf5786334620e7065ca53cd065170baf0620f9[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:26:56 2022 +0200
+
+    Create three 'p' tags, each to display the result, score and game result
+
+[33mcommit 0844e51ec6d60209e94ff5605e19d36f51849da5[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:22:02 2022 +0200
+
+    Create three buttons each with value attributes
+
+[33mcommit be5cbb307914c6343861d949624f6fb2577bd58e[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:18:50 2022 +0200
+
+    Create 'div' element with an ID of 'game'
+
+[33mcommit 5b8292056ce8dfa929b4bc817959d311a30e38f8[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:16:47 2022 +0200
+
+    Reset script
+
+[33mcommit ca2d82534401e33fca282712aa3089543b751b10[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 21:15:51 2022 +0200
+
+    Reset HTML
+
+[33mcommit d151698bcdd3a79a73fecafb41cfbe3d5dd2a5f2[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 18:26:51 2022 +0200
+
+    Add 'forEach' function to buttons variable' so that the 'playRound' function takes button value
+
+[33mcommit c4b02e18d70a491469e130176e776ddb7c3b5776[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 18:20:44 2022 +0200
+
+    Target all buttons
+
+[33mcommit a77f141c24cc9505accb427f443071266209a350[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 18:10:41 2022 +0200
+
+    Insert 'playerSelection' parameter in 'playRound' function
+
+[33mcommit 0b2c34b79901172f9e682588e0b132dd4d22f410[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 22 18:08:34 2022 +0200
+
+    Insert three buttons with values of 'Rock', 'Paper' and 'Scissors'
+
+[33mcommit 5bb5ac26be0734b623ecff2965f8d09e1912f1f8[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 15 13:47:36 2022 +0200
+
+    Target div from index and set it a variable called 'gameDisplay'
+
+[33mcommit 3b408eeda95135e35bd27e566db93516e9023c15[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 15 13:45:44 2022 +0200
+
+    Create a div to display game content
+
+[33mcommit a7454916a828971b453cd4de7019d899b776dcb1[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Fri Jul 15 13:37:27 2022 +0200
+
+    Remove function 'game()' with loop for game
+
+[33mcommit 0828f4a9190b7c25d02ad5427867ad63e00c6dc5[m[33m ([m[1;31morigin/rps-ui[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Tue Jul 12 09:55:38 2022 +0200
+
+    Remove the code to run computerPlay and playRound after function code
+
+[33mcommit 0ec54e3d1eb58e276ec9bc77231c5668564c982a[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 18:49:15 2022 +0200
+
+    Change all console.log functionfu
+    
+    git status
+
+[33mcommit b1126be6a86a1a77b9195c56ea7fd3eaa2dd58c2[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 18:04:33 2022 +0200
+
+    Change the statement for the winner of each round, as well as the winner statement of the gamej
+
+[33mcommit d9015255d263c98d29c6095a593d23de5d899b41[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 17:55:13 2022 +0200
+
+    Removed 'computerPlay' func from 'game's function
+
+[33mcommit b8c6fe446fe18eb039348f03781bf70f3170ad00[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 17:35:30 2022 +0200
+
+    Create function results that determines the player with the most points and displays the winner
+
+[33mcommit 13738be3124c060e9793fc53593a5dabd3567236[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 17:04:40 2022 +0200
+
+    Create function names 'game' that will loop the game 5 times
+
+[33mcommit 339a06f2ced2005a41d5d49f3e5d54b55f86aee8[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 16:21:33 2022 +0200
+
+    Change function 'game' to 'playRound'
+
+[33mcommit 18053860ff9acea8fda518b744a2a502ef50c276[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 16:18:03 2022 +0200
+
+    Create playerSelection variable in 'game' function and add conditional for game
+
+[33mcommit 55b45f4c2ae806036076d586b7cd437226b423d9[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 13:36:37 2022 +0200
+
+    Add code for computerSelection to get random value from compOption array, as well as Add function for game
+
+[33mcommit 6d193f9ff84ab122604550ba8385873add3eeb50[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 13:09:08 2022 +0200
+
+    Create computerPlay function
+
+[33mcommit 6c09452ec6da7dd1e7c08dd226cc3177d83b5878[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 13:06:18 2022 +0200
+
+    Add basic starter html tags and linked script document
+
+[33mcommit 1f94b76e64c4316f51d4867fc333a2d57457fbf0[m
+Author: oleolerato <olerato.mosikidi@gmail.com>
+Date:   Mon Jul 11 13:04:07 2022 +0200
+
+    Add simple description of project
+
+[33mcommit 5347d33118754ada691075140d352a1925bb11e8[m
+Author: oleolerato <105112253+oleolerato@users.noreply.github.com>
+Date:   Mon Jul 11 12:19:10 2022 +0200
+
+    Initial commit

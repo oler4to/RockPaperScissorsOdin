@@ -1,4 +1,5 @@
-const gameDisplay = document.querySelector('#game');
+
+const gameDisplay = document.querySelector('.gameDisplay')
 const buttons = document.querySelectorAll('#game button');
 
 const playResult = document.querySelector('.result');
@@ -53,6 +54,7 @@ function playRound(){
     if((playerSelection == computerSelection)){
       tie++;
       result = "YOU BOTH TIED";
+      state = `YOU BOTH HIT ${computerSelection}`
       score = `TIES: ${tie}`;
       
     }else if((playerSelection == "ROCK" && computerSelection == "PAPER") || (playerSelection == "PAPER" && computerSelection == "SCISSORS") || (playerSelection == "SCISSORS" && computerSelection == "ROCK")){
@@ -81,7 +83,6 @@ function playRound(){
 
 
 buttons.forEach((btn) =>{
-  btn.textContent = btn.value;
   
   btn.addEventListener("click", () => {
     buttonSelect(btn.value);
