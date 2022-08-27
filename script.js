@@ -7,7 +7,7 @@ const statement = document.querySelector('.statement');
 const scorePlayer = document.querySelector('.scorePlayer');
 const scoreComp = document.querySelector('.scoreComputer');
 const defaultScore = document.createElement('p');
-
+const endResult = document.querySelector('#endResult')
 let playerScore = 0;
 let computerScore = 0;
 let tie = 0;
@@ -105,7 +105,7 @@ function reset(){
   score = '';
   result = "";
   state = "";
-  
+    
     scorePlayer.textContent = plyScr;
     scoreComp.textContent = compScr;
     statement.textContent = state;
@@ -113,13 +113,14 @@ function reset(){
     defaultScore.textContent = score;
 }
 function checkScore(){
+    endResult.innerHTML = ''
   if(playerScore == 5 || computerScore == 5 || tie == 5){ 
     if(playerScore == 5){
-    alert("YOU WON THE GAME!");
+    endResult.innerHTML = ("YOU WON THE GAME!");
   } else if (computerScore == 5){
-    alert("THIS GAME GOES TO THE COMPUTER");
+    endResult.innerHTML = ("THIS GAME GOES TO THE COMPUTER");
   } else if (tie == 5){
-    alert("THE GAME ENDS IN A TIE");
+    endResult.innerHTML = ("THE GAME ENDS IN A TIE");
   }
   reset();
   }
