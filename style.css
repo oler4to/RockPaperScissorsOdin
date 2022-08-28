@@ -1,8 +1,7 @@
+
 body{
-  background-color: rgb(140,178,161);
+  background-color: rgb(177,140,178);
   font-family: Sans-Serif;
-}
-body{
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -14,7 +13,17 @@ body{
   flex-direction: row;
   gap: 30%;
   border: 4px solid rgb(38,47,82);
-  padding: 10px;
+  padding: 15px;
+}
+
+.scrBoard{
+  letter-spacing: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  
+  text-align: right;
 }
 
 h1{
@@ -22,6 +31,7 @@ h1{
   text-align: left;
   font-size: 68px;
   line-height: 58px;
+  color: white;
 }
 
 .container1{
@@ -29,6 +39,7 @@ h1{
   flex-direction: row;
   align-self: center;
   gap: 20px;
+  align-items: center;
 }
 
 #game button{
@@ -40,8 +51,8 @@ h1{
 }
 
 #game img{
-  width: 228px;
-  height: 228px;
+  width: 100px;
+  height: auto;
 }
 
 .gameDisplay {
@@ -50,12 +61,13 @@ h1{
   font-size: 22px;
   font-weight: bold;
   width: 70%;
-  color: rgb(11,56,106);
+  color: rgb(74,32,204);
 }
 
 h2{
   align-self: center;
   letter-spacing: 15px;
+  color: white;
 }
 
 #game {
@@ -74,8 +86,8 @@ h2{
   line-break: loose;
   word-wrap: normal;
   letter-spacing: 10px;
-  color: rgb(10,109,227);
-  background-color: rgb(174,206,192);
+  color: rgb(104,85,198);
+  background-color: rgb(204,174,206);
   align-self: center;
   opacity: 45%;
 }
